@@ -1,5 +1,6 @@
 import os
-from google import genai
+# from google import genai
+import google.generativeai as genai
 import json
 
 client = genai.Client()
