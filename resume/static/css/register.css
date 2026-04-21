@@ -1,0 +1,233 @@
+/* =============================================
+   BLACK & GREEN THEME - RESPONSIVE CSS
+   For Register / Create Account Page
+   ============================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #0a0f0c 0%, #0c1210 100%);
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, sans-serif;
+    color: #e2f0e6;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+/* Container */
+.container {
+    max-width: 480px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Form Wrapper */
+.form-wrapper {
+    background: #0e1411;
+    border-radius: 28px;
+    padding: 2.5rem;
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(46, 204, 113, 0.12);
+    backdrop-filter: blur(2px);
+    transition: all 0.3s ease;
+}
+
+/* Headings */
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #b3ffcf 0%, #4cd964 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin-bottom: 2rem;
+    letter-spacing: -0.02em;
+}
+
+/* Input Fields */
+.input-field {
+    margin-bottom: 1.5rem;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 1rem 1.2rem;
+    background: #0b110e;
+    border: 1.5px solid rgba(46, 204, 113, 0.2);
+    border-radius: 16px;
+    font-size: 1rem;
+    font-family: inherit;
+    color: #e2f0e6;
+    transition: all 0.25s ease;
+}
+
+.input-field input:focus {
+    outline: none;
+    border-color: #4cd964;
+    box-shadow: 0 0 0 3px rgba(76, 217, 100, 0.1);
+    background: #0e1512;
+}
+
+.input-field input::placeholder {
+    color: #4a6656;
+}
+
+/* Register Button */
+.register-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #1a3a2a 0%, #0f2a1e 100%);
+    border: 1.5px solid rgba(76, 217, 100, 0.4);
+    color: #b3ffcf;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 60px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+    font-family: inherit;
+}
+
+.register-btn:hover {
+    background: linear-gradient(135deg, #1f4632 0%, #143522 100%);
+    border-color: #4cd964;
+    color: #d4ffea;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(46, 204, 113, 0.2);
+}
+
+.register-btn:active {
+    transform: translateY(0);
+}
+
+/* Login Link */
+.login-link {
+    text-align: center;
+    margin-top: 1.75rem;
+    color: #9abfaa;
+    font-size: 0.9rem;
+}
+
+a {
+    color: #4cd964;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    border-bottom: 1px solid transparent;
+}
+
+a:hover {
+    color: #a3f0b0;
+    border-bottom-color: #4cd964;
+}
+
+/* Responsive Design */
+@media (max-width: 540px) {
+    body {
+        padding: 1rem;
+    }
+    
+    .form-wrapper {
+        padding: 1.8rem;
+        border-radius: 24px;
+    }
+    
+    h2 {
+        font-size: 1.7rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .input-field input {
+        padding: 0.85rem 1.1rem;
+        font-size: 0.95rem;
+    }
+    
+    .register-btn {
+        padding: 0.85rem 1.25rem;
+        font-size: 0.95rem;
+    }
+    
+    .login-link {
+        font-size: 0.85rem;
+        margin-top: 1.5rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .form-wrapper {
+        padding: 1.4rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .input-field {
+        margin-bottom: 1.2rem;
+    }
+    
+    .input-field input {
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .register-btn {
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a0f0c;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2ecc71;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4cd964;
+}
+
+/* Focus visible outline for accessibility */
+input:focus, button:focus {
+    outline: none;
+}
+
+/* Smooth transitions */
+a, button, input {
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Subtle green glow on input focus */
+.input-field input:focus {
+    box-shadow: 0 0 0 3px rgba(76, 217, 100, 0.15);
+}
+
+/* Disable default autofill background color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #0b110e inset !important;
+    -webkit-text-fill-color: #e2f0e6 !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Password strength indicator (optional, adds visual feedback) */
+.input-field input[type="password"]:focus {
+    border-color: #4cd964;
+}

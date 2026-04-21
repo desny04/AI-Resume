@@ -2,8 +2,12 @@ import os
 # from google import genai
 import google.generativeai as genai
 import json
+from dotenv import load_dotenv
 
-client = genai.Client()
+load_dotenv()
+
+# client = genai.Client()
+genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 def analyze_resume(resume_text, job_desc):
     prompt = f"""
@@ -23,9 +27,10 @@ def analyze_resume(resume_text, job_desc):
     """
 
     # Call generate_content directly from the client, passing the model name
-    response = client.models.generate_content(
+    
+    response = model.generate_content(
         model="gemini-2.5-flash",
         contents=prompt
     )
     
-    return response.text
+    return response.tex
