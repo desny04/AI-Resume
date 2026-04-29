@@ -66,7 +66,7 @@ def home(request):
     return render(request, 'home.html', {'form': form})
 
 
-# @login_required
+@login_required
 def dashboard(request):
     analyses = ResumeAnalysis.objects.filter(user=request.user).order_by('-created_at')
     return render(request, 'dashboard.html', {'analyses': analyses})
